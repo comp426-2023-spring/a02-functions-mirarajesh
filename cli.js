@@ -20,7 +20,7 @@ let latitude = 0;
 let longitude = 0; 
 //setting latitude values 
 if (args.s) { 
-    latitude = -args.s 
+    latitude = -args.s    
 } else if (args.n) { 
     latitude = args.n 
 } else { 
@@ -48,7 +48,7 @@ if(args.d) {
 const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude + '&daily=precipitation_hours&timezone=' + timezone); 
 const data = await response.json();
 //if galoshes are needed 
-if(data.daily.precipitation_hours[day] === 0) { 
+if(data.daily.precipitation_hours[day] > 0) { 
     console.log("You might need your galoshes")
 } else { 
     console.log("You will not need your galoshes")
