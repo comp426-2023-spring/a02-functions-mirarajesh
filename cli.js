@@ -40,10 +40,7 @@ if(args.z) {
     timezone = args.z
 }
 //setting the value of the day that needs to be looked up 
-let day = 1 
-if(args.d) {
-    day = args.d; 
-}
+const day = args.d; 
 //fetch 
 const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude + '&daily=precipitation_hours&timezone=' + timezone); 
 const data = await response.json();
