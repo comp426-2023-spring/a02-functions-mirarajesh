@@ -22,6 +22,7 @@
   "homepage": "https://github.com/comp426-2023-spring/a02-functions-mirarajesh#readme",
   "dependencies": {
     "minimist": "^1.2.8",
-    "moment-timezone": "0.5.43"
+    "moment-timezone": "0.5.43",
+    "node-fetch": "^3.3.1"
   }
 }
